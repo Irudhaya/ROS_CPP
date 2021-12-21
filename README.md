@@ -19,19 +19,25 @@ in gazebo at two instants.
 
 The above cpp files will provide a ros executable node. But for the node to perform the function mentioned in the code the simulation of the robot has to be launched.To launch the simulation, run the following command in the terminal,
 
-```roslaunch rosbot_launch rosbot_launch.launch```
+```sh
+roslaunch rosbot_launch rosbot_launch.launch
+```
 
 On executing the above command in the terminal the following window opens. Gazebo environment with the robot and its simulation world.
 
 ![gazebo_world](./files/gazebo_world.png)
 
 The available topics from the robot can be seen in the terminal with the following command,
-```rostopic list```
+```sh
+rostopic list
+```
 ![rostopic](./files/rostopics_model.png)
 
 To execute any of the above mentioned "**__exercise.cpp**", make sure that the simulation is running and to execute the node provided by the "**__exercise.cpp**", run the following command in the terminal.
 
-```rosrun c_scripts unit3_exercise```
+```sh
+rosrun c_scripts unit3_exercise
+```
 
 ![Robot movement](./files/unit3_exercise.gif)
 
