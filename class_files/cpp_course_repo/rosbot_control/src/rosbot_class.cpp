@@ -147,9 +147,20 @@ double RosbotClass::get_time() {
   return secs;
 }
 
-float RosbotClass::get_laser(int index) { return laser_range[index]; }
+float RosbotClass::get_laser(int index) { 
+  ros::spinOnce();
+  if (laser_range.empty()){
+    ROS_INFO_STREAM("No laser data received");
+    return 0.0;
+  }
+  else{
+    return laser_range[index]; 
+  }
+  return laser_range[index];
+  }
 
 float *RosbotClass::get_laser_full() {
+  ros::spinOnce();
   float *laser_range_pointer = laser_range.data();
   return laser_range_pointer;
 }
