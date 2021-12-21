@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(c_scripts)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+add_compile_options(-std=c++1z)
 
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs

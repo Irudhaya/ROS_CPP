@@ -5,3 +5,6 @@ Basics of using C++ with ROS. The files that are in this repository are created 
 ## Lesson 1:
 
 * [*name.cpp*](https://github.com/Irudhaya/ROS_CPP/blob/learning/lessons/class_files/cpp_course_repo/utilities/name.cpp)  c++ code that prints "Hello World" to the console.
+* [*unit1.cpp*]() c++ code that makes the robot to move and prints the position of the robot in Gazebo
+* [*unit1_exercise.cpp*] ros c++ code that makes the robot to move and prints the position of the robot
+in gazebo at two instants.

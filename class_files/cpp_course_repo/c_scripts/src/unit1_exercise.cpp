@@ -1,24 +1,29 @@
 #include "rosbot_control/rosbot_class.h"
 #include <ros/ros.h>
+#include <map>
 
 int main(int argc, char **argv) {
   ros::init(argc, argv, "rosbot_node");
 
+  std::map<double, float> robot_positions;
   RosbotClass rosbot;
   rosbot.move();
 
   auto x1 = rosbot.get_position(1);
-  auto y1 = rosbot.get_position(2);
+  auto timestamp = rosbot.get_time();
 
-  ROS_INFO_STREAM("X: "<<x1<<" Y: "<<y1);
+  robot_positions.insert(std::make_pair(timestamp,x1));
 
   rosbot.move();
 
-  auto x2 = rosbot.get_position(1);
-  auto y2 = rosbot.get_position(2);
+  x1 = rosbot.get_position(1);
+  timestamp = rosbot.get_time();
 
+  robot_positions.insert(std::make_pair(timestamp,x1));
 
-  ROS_INFO_STREAM("X: "<<x2<<" Y: "<<y2);
+  for (auto& [key,value]:robot_positions){
+    ROS_INFO_STREAM("X: "<<value<<" at timestamp ["<<key<<"]\n");
+  }
 
   return 0;
 }
