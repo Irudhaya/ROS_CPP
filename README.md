@@ -11,7 +11,7 @@ in gazebo at two instants.
 * [*unit2_exercise.cpp*](./class_files/cpp_course_repo/c_scripts/src/unit2_exercise.cpp)  code that retrieves full cartesian pose of the robot as list from odom and prints the position of the robot
 * [*unit3_exercise.cpp*](./class_files/cpp_course_repo/c_scripts/src/unit3_exercise.cpp) separate function that makes the robot to move with series of velocity commands and returns the cartesian pose of the robot available through the odom topic 
 * [*unit4_exercise.cpp*](./class_files/cpp_course_repo/c_scripts/src/unit4_exercise.cpp) ros node that receives all the laser readings at that timestamp and print it to the console with pointer to the first element of the laser readings
-* [*unit5_exercise.cpp*](./class_files/cpp_course_repo/c_scripts/src/unit5_exercise.cpp) separate class that inherits from [rosbot_control]() and moves the robot
+* [*unit5_exercise.cpp*](./class_files/cpp_course_repo/c_scripts/src/unit5_exercise.cpp) separate class that inherits from [rosbot_control](./class_files/cpp_course_repo/rosbot_control/src/rosbot_class.cpp) and moves the robot
 * [*unit6_exercise.cpp*](./class_files/cpp_course_repo/c_scripts/src/unit6_exercise.cpp) mini project  of the course
 
 
